@@ -1,0 +1,10 @@
+/*
+ *  labelholder - v0.0.1
+ *  Floatlabels for Bootstrap.
+ *  https://github.com/Borzik/labelholder
+ *
+ *  Made by Felix Borzik
+ *  Under MIT License
+ */
+
+.input-group.has-labelholder,.form-group.has-labelholder{position:relative}.input-group.has-labelholder:before,.form-group.has-labelholder:before{display:none;content:attr(data-label);pointer-events:none;opacity:1;font-size:10px;z-index:5;position:absolute;top:2px;left:12px;font-weight:bold}.input-group.has-labelholder.floating:before,.form-group.has-labelholder.floating:before{display:block}.input-group.has-labelholder.floating .form-control,.form-group.has-labelholder.floating .form-control{padding:10px 12px 2px}.input-group.has-labelholder.floating.input-group-lg .form-control,.form-group.has-labelholder.floating.input-group-lg .form-control,.input-group.has-labelholder.floating.form-group-lg .form-control,.form-group.has-labelholder.floating.form-group-lg .form-control{padding:14px 16px 6px}.input-group.has-labelholder.floating.input-group-lg:before,.form-group.has-labelholder.floating.input-group-lg:before,.input-group.has-labelholder.floating.form-group-lg:before,.form-group.has-labelholder.floating.form-group-lg:before{font-size:12px;left:16px}.input-group.has-labelholder.floating.input-group-sm .form-control,.form-group.has-labelholder.floating.input-group-sm .form-control,.input-group.has-labelholder.floating.form-group-sm .form-control,.form-group.has-labelholder.floating.form-group-sm .form-control{padding:9px 10px 1px}.input-group.has-labelholder.floating.input-group-sm:before,.form-group.has-labelholder.floating.input-group-sm:before,.input-group.has-labelholder.floating.form-group-sm:before,.form-group.has-labelholder.floating.form-group-sm:before{font-size:9px;left:10px}

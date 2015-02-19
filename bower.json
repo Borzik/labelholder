@@ -1,0 +1,28 @@
+{
+  "name": "labelholder",
+  "version": "0.0.1",
+  "authors": [
+    "Felix Borzik <borzik1992@gmail.com>"
+  ],
+  "description": "Floatlabels for Bootstrap",
+  "main": [
+    "dist/labelholder.js",
+    "dist/labelholder.css"
+  ],
+  "keywords": [
+    "labelholder",
+    "placeholder",
+    "label",
+    "bootstrap",
+    "floatlabels"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Borzik/labelholder",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
