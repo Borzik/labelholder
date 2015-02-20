@@ -7,14 +7,13 @@ do ($ = jQuery, window, document) ->
 
   Plugin = (@element, options) ->
     @settings = $.extend {}, defaults, options
-    @_defaults = defaults
-    @_name = pluginName
     @init()
     return
 
   Plugin.prototype =
     init: ->
       @$element = $(@element)
+      return if @$element.hasClass('has-labelholder')
       @$element.addClass('has-labelholder')
       @$input = @$element.find @settings.elements
       @setDataPlaceholder()
