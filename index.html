@@ -10,6 +10,11 @@
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/Borzik/labelholder/master/dist/labelholder.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <script>
+      $(document).ready(function(){
+        $('.labelholder').labelholder()
+      })
+    </script>
 
     <title>Labelholder</title>
   </head>
@@ -34,17 +39,16 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+<form>
+  <div class="form-group form-group-lg labelholder" data-label="See how it works?">
+    <input class="form-control" type="text" placeholder="Try typing here...">
+  </div>
+</form>
         <h2>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
 <p>This plugin allows you to use placeholders as labels in your Bootstrap forms. Its original idea of <a href="https://dribbble.com/shots/1254439--GIF-Float-Label-Form-Interaction">Float Label</a> belongs to <a href="https://dribbble.com/mds">Matt D. Smith</a>.
 I was inspired by <a href="http://clubdesign.github.io/floatlabels.js/">clubdesign's Floatlabels</a>, although there are some differences:</p>
-
-<form>
-  <div class="form-group-lg labelholder" data-label="See how it works?">
-    <input class="form-control" type="text" placeholder="Try typing here...">
-  </div>
-</form>
 
 <ul>
 <li>It supports Bootstrap ~&gt; 3.0</li>
