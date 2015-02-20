@@ -42,8 +42,5 @@
     "grunt-coffeelint": "~0.0.13",
     "grunt-banner": "~0.3.1",
     "grunt-contrib-less": "~1.0.0"
-  },
-  "scripts": {
-    "test": "grunt travis --verbose"
   }
 }

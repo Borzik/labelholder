@@ -87,6 +87,4 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-banner');
 
 	grunt.registerTask("default", ["less", "coffeelint", "coffee", "uglify", "usebanner"]);
-	grunt.registerTask("travis", ["jshint"]);
-
 };

@@ -1,5 +1,5 @@
 /*
- *  labelholder - v0.0.1
+ *  labelholder - v0.0.2
  *  Floatlabels for Bootstrap.
  *  https://github.com/Borzik/labelholder
  *
