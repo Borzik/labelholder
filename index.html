@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Labelholder : Use placeholder as labels for Bootstrap">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Labelholder</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/Borzik/labelholder">View on GitHub</a>
+
+          <h1 id="project_title">Labelholder</h1>
+          <h2 id="project_tagline">Use placeholder as labels for Bootstrap</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/Borzik/labelholder/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/Borzik/labelholder/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
+
+<p>This plugin allows you to use placeholders as labels in your Bootstrap forms. Its original idea of <a href="https://dribbble.com/shots/1254439--GIF-Float-Label-Form-Interaction">Float Label</a> belongs to <a href="https://dribbble.com/mds">Matt D. Smith</a>.
+I was inspired by <a href="http://clubdesign.github.io/floatlabels.js/">clubdesign's Floatlabels</a>, although there are some differences:</p>
+
+<ul>
+<li>It supports Bootstrap ~&gt; 3.0</li>
+<li>No markup changes required if used with Bootstrap</li>
+<li>It uses :before pseudo-element</li>
+<li>All styles are moved to <code>src/labelholder.less</code> file</li>
+<li>And it's animations are a bit different</li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>Assuming you already have a bootstrap form:
+You'll need to include <code>labelholder.js</code> AFTER jQuery script tag.
+And, include <code>labelholder.css</code> after bootstrap, but before your own style overrides.</p>
+
+<div class="highlight highlight-html"><pre>  &lt;<span class="pl-ent">head</span>&gt;
+    <span class="pl-c">&lt;!-- ... --&gt;</span>
+<span class="pl-s2">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>jquery.js<span class="pl-pds">"</span></span>  <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>labelholder.js<span class="pl-pds">"</span></span>  <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/javascript<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s2">    &lt;<span class="pl-ent">style</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>bootstrap.css<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s2">    &lt;<span class="pl-ent">style</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>labelholder.css<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">style</span>&gt;</span>
+<span class="pl-s2">    &lt;<span class="pl-ent">style</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>your_styles.css<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text/css<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">style</span>&gt;</span>
+    <span class="pl-c">&lt;!-- ... --&gt;</span>
+  &lt;/<span class="pl-ent">head</span>&gt;</pre></div>
+
+<p>If you use LESS and you want to precompile it with your own variables set, import them in next sequence:</p>
+
+<div class="highlight highlight-less"><pre>  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>bootstrap<span class="pl-pds">"</span></span>;
+  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>labelholder<span class="pl-pds">"</span></span>;
+  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>overrides<span class="pl-pds">"</span></span>;</pre></div>
+
+<p>It will take your padding variables from overrides and apply them instead of bootstrap default ones.</p>
+
+<h2>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
+
+<p>Check <a href="https://github.com/Borzik/labelholder/blob/master/CONTRIBUTING.md">CONTRIBUTING.md</a> for more information.</p>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p><a href="http://felixborzik.mit-license.org/">MIT License</a> © Felix Borzik</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Labelholder maintained by <a href="https://github.com/Borzik">Borzik</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-44869469-4");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+
+  </body>
+</html>
