@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 		},
 
 		usebanner: {
-	    taskName: {
+	    setBanners: {
 	      options: {
 	        position: 'top',
 	        banner: '<%= meta.banner %>',
