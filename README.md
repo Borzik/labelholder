@@ -24,14 +24,14 @@ Assuming you already have a bootstrap form:
   </head>
 ```
 
-If you use LESS and you want to precompile it with your own variables set, import them in next sequence:
+If you use LESS and you want to precompile it with your own padding variables set, import only `src/less/labelholder` file:
 
 ```less
-  @import "labelholder";
   @import "bootstrap_and_overrides";
+  @import "src/less/labelholder";
 ```
 
-It will take your padding variables from overrides and apply them instead of bootstrap default ones, which are also stored in labelholder.less file.
+It will take your padding variables from overrides and apply them, instead of Bootstrap defaults, which are also stored in `src/less/variables.less` file.
 
 ## Usage and configuration
 Just call `.labelholder()` on all your input wrappers (for Bootstrap, it's `.form-group`, and `.input-group`. Don't forget to add a placeholder!
