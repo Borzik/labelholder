@@ -1,5 +1,5 @@
 /*
- *  labelholder - v0.0.3
+ *  labelholder - v0.0.4
  *  Floatlabels for Bootstrap.
  *  https://github.com/Borzik/labelholder
  *
@@ -18,13 +18,14 @@
     Plugin = function(element, options) {
       this.element = element;
       this.settings = $.extend({}, defaults, options);
-      this._defaults = defaults;
-      this._name = pluginName;
       this.init();
     };
     Plugin.prototype = {
       init: function() {
         this.$element = $(this.element);
+        if (this.$element.hasClass('has-labelholder')) {
+          return;
+        }
         this.$element.addClass('has-labelholder');
         this.$input = this.$element.find(this.settings.elements);
         this.setDataPlaceholder();

@@ -25,12 +25,12 @@ module.exports = function(grunt) {
 		less: {
 			development: {
 				files: {
-					"dist/labelholder.css": "src/labelholder.less"
+					"dist/labelholder.css": "src/less/labelholder-standalone.less"
 				}
 			},
 			dist: {
 				files: {
-					"dist/labelholder.min.css": "src/labelholder.less"
+					"dist/labelholder.min.css": "src/less/labelholder-standalone.less"
 				},
 				options: {
 					compress: true,
