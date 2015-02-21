@@ -6,8 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Labelholder : Use placeholder as labels for Bootstrap">
 
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="//cdn.rawgit.com/Borzik/labelholder/master/dist/labelholder.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/Borzik/labelholder/master/dist/labelholder.min.css">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
+    <script>
+      $(document).ready(function(){
+        $('.labelholder').labelholder()
+      })
+    </script>
     <title>Labelholder</title>
   </head>
 
@@ -31,6 +39,18 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+        <h2><a id="description" class="anchor" href="#demo" aria-hidden="true"><span class="octicon octicon-link"></span></a>Demo</h2>
+        <form>
+          <div class="form-group form-group-lg labelholder" data-label="See how it works?">
+            <input class="form-control" type="text" placeholder="Try typing here...">
+          </div>
+          <div class="form-group form-group labelholder" data-label="It's amazing, right?">
+            <input class="form-control" type="text" placeholder="Regular-sized input">
+          </div>
+          <div class="form-group form-group-sm labelholder">
+            <input class="form-control" type="text" placeholder="Small-sized input">
+          </div>
+        </form>
         <h2>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
