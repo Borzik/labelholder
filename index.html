@@ -5,16 +5,8 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <meta name="description" content="Labelholder : Use placeholder as labels for Bootstrap">
-    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
-    <script src="//cdn.rawgit.com/Borzik/labelholder/master/dist/labelholder.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdn.rawgit.com/Borzik/labelholder/master/dist/labelholder.min.css">
+
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-    <script>
-      $(document).ready(function(){
-        $('.labelholder').labelholder()
-      })
-    </script>
 
     <title>Labelholder</title>
   </head>
@@ -39,11 +31,6 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-<form>
-  <div class="form-group form-group-lg labelholder" data-label="See how it works?">
-    <input class="form-control" type="text" placeholder="Try typing here...">
-  </div>
-</form>
         <h2>
 <a id="description" class="anchor" href="#description" aria-hidden="true"><span class="octicon octicon-link"></span></a>Description</h2>
 
@@ -51,19 +38,23 @@
 I was inspired by <a href="http://clubdesign.github.io/floatlabels.js/">clubdesign's Floatlabels</a>, although there are some differences:</p>
 
 <ul>
-<li>It supports Bootstrap ~&gt; 3.0</li>
+<li>It fully supports Bootstrap ~&gt; 3.0</li>
 <li>No markup changes required if used with Bootstrap</li>
-<li>It uses :before pseudo-element</li>
-<li>All styles are moved to <code>src/labelholder.less</code> file</li>
-<li>And it's animations are a bit different</li>
+<li>It uses <code>:before</code> pseudo-element instead of adding its own element for label</li>
+<li>All styles are in <code>src/labelholder.less</code> file, easily customizable for non-default form padding values</li>
+<li>It does not change element's height causing the whole page content to go a bit down</li>
+<li>And it does not require you to use non-equal paddings</li>
 </ul>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
 
-<p>Assuming you already have a bootstrap form:
-You'll need to include <code>labelholder.js</code> AFTER jQuery script tag.
-And, include <code>labelholder.css</code> after bootstrap, but before your own style overrides.</p>
+<p>Assuming you already have a bootstrap form:</p>
+
+<ul>
+<li>Include <code>labelholder.js</code> after jQuery script tag</li>
+<li>Include <code>labelholder.css</code> after bootstrap styles, but before your own style overrides</li>
+</ul>
 
 <div class="highlight highlight-html"><pre>  &lt;<span class="pl-ent">head</span>&gt;
     <span class="pl-c">&lt;!-- ... --&gt;</span>
@@ -77,11 +68,46 @@ And, include <code>labelholder.css</code> after bootstrap, but before your own s
 
 <p>If you use LESS and you want to precompile it with your own variables set, import them in next sequence:</p>
 
-<div class="highlight highlight-less"><pre>  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>bootstrap<span class="pl-pds">"</span></span>;
-  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>labelholder<span class="pl-pds">"</span></span>;
-  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>overrides<span class="pl-pds">"</span></span>;</pre></div>
+<div class="highlight highlight-less"><pre>  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>labelholder<span class="pl-pds">"</span></span>;
+  <span class="pl-k">@import</span> <span class="pl-s1"><span class="pl-pds">"</span>bootstrap_and_overrides<span class="pl-pds">"</span></span>;</pre></div>
 
-<p>It will take your padding variables from overrides and apply them instead of bootstrap default ones.</p>
+<p>It will take your padding variables from overrides and apply them instead of bootstrap default ones, which are also stored in labelholder.less file.</p>
+
+<h2>
+<a id="usage-and-configuration" class="anchor" href="#usage-and-configuration" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage and configuration</h2>
+
+<p>Just call <code>.labelholder()</code> on all your input wrappers (for Bootstrap, it's <code>.form-group</code>, and <code>.input-group</code>. Don't forget to add a placeholder!</p>
+
+<div class="highlight highlight-html"><pre>  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-group labelholder<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s1"><span class="pl-pds">"</span>Try typing here...<span class="pl-pds">"</span></span>&gt;
+  &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<div class="highlight highlight-javascript"><pre>  $(<span class="pl-s1"><span class="pl-pds">'</span>.labelholder<span class="pl-pds">'</span></span>).labelholder()</pre></div>
+
+<h3>
+<a id="custom-floating-label" class="anchor" href="#custom-floating-label" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom floating label</h3>
+
+<p>If you want to have floating label text to be different from placeholder, then add <code>data-label</code> attribute to wrapping <code>div</code>. Example:</p>
+
+<div class="highlight highlight-html"><pre>  &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-group labelholder<span class="pl-pds">"</span></span> <span class="pl-e">data-label</span>=<span class="pl-s1"><span class="pl-pds">"</span>See how it works?<span class="pl-pds">"</span></span>&gt;
+    &lt;<span class="pl-ent">input</span> <span class="pl-e">class</span>=<span class="pl-s1"><span class="pl-pds">"</span>form-control<span class="pl-pds">"</span></span> <span class="pl-e">type</span>=<span class="pl-s1"><span class="pl-pds">"</span>text<span class="pl-pds">"</span></span> <span class="pl-e">placeholder</span>=<span class="pl-s1"><span class="pl-pds">"</span>Try typing here...<span class="pl-pds">"</span></span>&gt;
+  &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<div class="highlight highlight-javascript"><pre>  $(<span class="pl-s1"><span class="pl-pds">'</span>.labelholder<span class="pl-pds">'</span></span>).labelholder()</pre></div>
+
+<h3>
+<a id="custom-change-events" class="anchor" href="#custom-change-events" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom change events</h3>
+
+<p>There are three events which are listened to by default: <code>keyup</code>, <code>blur</code>, <code>change</code>. Just pass your own string <code>events</code> option with a list to your <code>labelholder()</code> call:</p>
+
+<div class="highlight highlight-javascript"><pre>  $(<span class="pl-s1"><span class="pl-pds">'</span>.labelholder<span class="pl-pds">'</span></span>).labelholder({ events<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>keyup custom_event<span class="pl-pds">'</span></span> })</pre></div>
+
+<h3>
+<a id="custom-elements" class="anchor" href="#custom-elements" aria-hidden="true"><span class="octicon octicon-link"></span></a>Custom elements</h3>
+
+<p>Labelholder is being attached to <code>input[type=text], input[type=date], textarea</code>. If you want to add other input types, just pass custom your input types as a string in a <code>elements</code> option:</p>
+
+<div class="highlight highlight-javascript"><pre>  $(<span class="pl-s1"><span class="pl-pds">'</span>.labelholder<span class="pl-pds">'</span></span>).labelholder({ elements<span class="pl-k">:</span> <span class="pl-s1"><span class="pl-pds">'</span>input[type=text], input[type=date], input[type=email], textarea<span class="pl-pds">'</span></span> })</pre></div>
 
 <h2>
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h2>
