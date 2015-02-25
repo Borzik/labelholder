@@ -1,6 +1,6 @@
 {
   "name": "labelholder",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Floatlabels for Bootstrap.",
   "keywords": [
     "labelholder",
@@ -41,6 +41,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-coffeelint": "~0.0.13",
     "grunt-banner": "~0.3.1",
-    "grunt-contrib-less": "~1.0.0"
+    "grunt-contrib-less": "~1.0.0",
+    "grunt-autoprefixer": "~2.2.0"
   }
 }

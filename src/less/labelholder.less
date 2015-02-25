@@ -1,53 +1,60 @@
+@import "variables.less";
+
 .has-labelholder {
   position: relative;
   .form-control {
-    -webkit-transition: padding .2s linear;
-    -moz-transition: padding .2s linear;
-    transition: padding .2s linear;
+    transition: padding @labelholder-transition-speed @labelholder-transition-type;
   }
   &:before {
     position: absolute;
-    top: 2px;
-    left: 12px;
+    top: @labelholder-top-base;
+    left: @padding-base-horizontal;
     opacity: 0;
-    z-index: 5;
+    z-index: @labelholder-z-index;
     pointer-events: none;
     content: attr(data-label);
-    font-size: 10px;
-    font-weight: bold;
-    -webkit-transition: opacity .2s linear;
-    -moz-transition: opacity .2s linear;
-    -ms-transition: opacity .2s linear;
-    -o-transition: opacity .2s linear;
-    transition: opacity .2s linear;
+    font-size: @labelholder-font-size-base;
+    font-weight: @labelholder-font-weight;
+    transition: opacity  @labelholder-transition-speed @labelholder-transition-type;
   }
   &.input-group-lg, &.form-group-lg {
     &:before {
-      font-size: 12px;
-      left: 16px;
+      font-size: @labelholder-font-size-lg;
+      left: @padding-large-horizontal;
+      top: @labelholder-top-lg;
     }
   }
   &.input-group-sm, &.form-group-sm {
     &:before {
-      font-size: 9px;
-      left: 10px;
+      font-size: @labelholder-font-size-sm;
+      left: @padding-small-horizontal;
+      top: @labelholder-top-sm;
     }
   }
   &.floating {
     &:before {
-      opacity: 1;
+      opacity: @labelholder-opacity;
     }
     .form-control {
-      padding: (@padding-base-vertical + 4px) @padding-base-horizontal (@padding-base-vertical - 4px);
+      padding-top: (@padding-base-vertical + @labelholder-padding-base);
+      padding-right: @padding-base-horizontal;
+      padding-bottom: (@padding-base-vertical - @labelholder-padding-base);
+      padding-left: @padding-base-horizontal;
     }
     &.input-group-lg, &.form-group-lg {
       .form-control {
-        padding: (@padding-large-vertical + 4px) @padding-large-horizontal (@padding-large-vertical - 4px);
+        padding-left: (@padding-large-vertical + @labelholder-padding-lg);
+        padding-right: @padding-large-horizontal;
+        padding-bottom: (@padding-large-vertical - @labelholder-padding-lg);
+        padding-left: @padding-large-horizontal;
       }
     }
     &.input-group-sm, &.form-group-sm {
       .form-control {
-        padding: (@padding-small-vertical + 4px) @padding-small-horizontal (@padding-small-vertical - 4px);
+        padding-top: (@padding-small-vertical + @labelholder-padding-sm);
+        padding-right: @padding-small-horizontal;
+        padding-bottom: (@padding-small-vertical - @labelholder-padding-sm);
+        padding-left: @padding-small-horizontal;
       }
     }
   }

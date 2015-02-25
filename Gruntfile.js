@@ -39,6 +39,12 @@ module.exports = function(grunt) {
 			}
 		},
 
+		autoprefixer: {
+			override: {
+				src: 'dist/*.css'
+			}
+		},
+
 		// Minify definitions
 		uglify: {
 			my_target: {
@@ -85,6 +91,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks("grunt-contrib-watch");
 	grunt.loadNpmTasks("grunt-contrib-less");
 	grunt.loadNpmTasks('grunt-banner');
+	grunt.loadNpmTasks('grunt-autoprefixer');
 
-	grunt.registerTask("default", ["less", "coffeelint", "coffee", "uglify", "usebanner"]);
+	grunt.registerTask("default", ["less", "autoprefixer", "coffeelint", "coffee", "uglify", "usebanner"]);
 };
