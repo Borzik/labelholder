@@ -1,5 +1,5 @@
 /*
- *  labelholder - v0.1.0
+ *  labelholder - v0.1.1
  *  Floatlabels for Bootstrap.
  *  https://github.com/Borzik/labelholder
  *
@@ -7,4 +7,4 @@
  *  Under MIT License
  */
 
-.has-labelholder{position:relative}.has-labelholder .form-control{-webkit-transition:padding .2s linear;transition:padding .2s linear}.has-labelholder:before{position:absolute;top:2px;left:12px;opacity:0;z-index:5;pointer-events:none;content:attr(data-label);font-size:10px;font-weight:bold;-webkit-transition:opacity .2s linear;transition:opacity .2s linear}.has-labelholder.input-group-lg:before,.has-labelholder.form-group-lg:before{font-size:12px;left:16px;top:3px}.has-labelholder.input-group-sm:before,.has-labelholder.form-group-sm:before{font-size:8px;left:10px;top:1px}.has-labelholder.floating:before{opacity:.6}.has-labelholder.floating .form-control{padding-top:12px;padding-right:12px;padding-bottom:0;padding-left:12px}.has-labelholder.floating.input-group-lg .form-control,.has-labelholder.floating.form-group-lg .form-control{padding-right:16px;padding-bottom:4px;padding-left:16px}.has-labelholder.floating.input-group-sm .form-control,.has-labelholder.floating.form-group-sm .form-control{padding-top:10px;padding-right:10px;padding-bottom:0;padding-left:10px}
+.has-labelholder{position:relative}.has-labelholder .form-control{-webkit-transition:padding .2s linear;transition:padding .2s linear}.has-labelholder:before{position:absolute;top:2px;left:12px;opacity:0;z-index:5;pointer-events:none;content:attr(data-label);font-size:10px;font-weight:bold;-webkit-transition:opacity .2s linear;transition:opacity .2s linear}.has-labelholder.input-group-lg:before,.has-labelholder.form-group-lg:before{font-size:12px;left:16px;top:3px}.has-labelholder.input-group-sm:before,.has-labelholder.form-group-sm:before{font-size:8px;left:10px;top:1px}.has-labelholder.floating:before{opacity:.6}.has-labelholder.floating .form-control{padding-top:12px;padding-right:12px;padding-bottom:0;padding-left:12px}.has-labelholder.floating.input-group-lg .form-control,.has-labelholder.floating.form-group-lg .form-control{padding-top:16px;padding-right:16px;padding-bottom:4px;padding-left:16px}.has-labelholder.floating.input-group-sm .form-control,.has-labelholder.floating.form-group-sm .form-control{padding-top:10px;padding-right:10px;padding-bottom:0;padding-left:10px}
