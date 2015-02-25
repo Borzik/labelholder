@@ -1,5 +1,5 @@
 /*
- *  labelholder - v0.1.1
+ *  labelholder - v0.1.2
  *  Floatlabels for Bootstrap.
  *  https://github.com/Borzik/labelholder
  *
@@ -57,8 +57,8 @@
 }
 .has-labelholder.floating.input-group-sm .form-control,
 .has-labelholder.floating.form-group-sm .form-control {
-  padding-top: 10px;
+  padding-top: 9px;
   padding-right: 10px;
-  padding-bottom: 0px;
+  padding-bottom: 1px;
   padding-left: 10px;
 }
