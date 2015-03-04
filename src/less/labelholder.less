@@ -8,7 +8,7 @@
   &:before {
     position: absolute;
     top: @labelholder-top-base;
-    left: @padding-base-horizontal;
+    left: @padding-base-horizontal + @labelholder-border-width;
     opacity: 0;
     z-index: @labelholder-z-index;
     pointer-events: none;
@@ -20,14 +20,14 @@
   &.input-group-lg, &.form-group-lg {
     &:before {
       font-size: @labelholder-font-size-lg;
-      left: @padding-large-horizontal;
+      left: @padding-large-horizontal + @labelholder-border-width;
       top: @labelholder-top-lg;
     }
   }
   &.input-group-sm, &.form-group-sm {
     &:before {
       font-size: @labelholder-font-size-sm;
-      left: @padding-small-horizontal;
+      left: @padding-small-horizontal + @labelholder-border-width;
       top: @labelholder-top-sm;
     }
   }
