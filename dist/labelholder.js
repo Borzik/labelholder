@@ -1,5 +1,5 @@
 /*
- *  labelholder - v0.1.3
+ *  labelholder - v0.1.4
  *  Floatlabels for Bootstrap.
  *  https://github.com/Borzik/labelholder
  *
@@ -13,7 +13,7 @@
     pluginName = 'labelholder';
     defaults = {
       events: 'keyup blur change',
-      elements: 'input[type=text], input[type=date], textarea'
+      elements: ['input[type=text]', 'input[type=password]', 'input[type=email]', 'input[type=number]', 'input[type=date]', 'input[type=tel]', 'input[type=url]', 'textarea'].join(', ')
     };
     Plugin = function(element, options) {
       this.element = element;

@@ -3,7 +3,16 @@ do ($ = jQuery, window, document) ->
 
   defaults =
     events: 'keyup blur change'
-    elements: 'input[type=text], input[type=date], textarea'
+    elements: [
+      'input[type=text]',
+      'input[type=password]',
+      'input[type=email]',
+      'input[type=number]',
+      'input[type=date]',
+      'input[type=tel]',
+      'input[type=url]',
+      'textarea'
+    ].join(', ')
 
   Plugin = (@element, options) ->
     @settings = $.extend {}, defaults, options
