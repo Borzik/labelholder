@@ -7,7 +7,9 @@
     "placeholder",
     "label",
     "bootstrap",
-    "floatlabels"
+    "floatlabels",
+    "jquery-plugin",
+    "ecosystem:jquery"
   ],
   "repository" : {
     "type" : "git",
